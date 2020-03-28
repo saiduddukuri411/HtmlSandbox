@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        /* 
+        -May want to add "border-box for "box-sizing so padding does not affect width
+        -Reset margin and padding 
+       */
+      }
+
+      body {
+        background:#344a72;
+      }
+
+      a {
+        /* 
+        Underlined links are ugly :)
+       */
+       text-decoration: none;
+      }
+
+      #container {
+        /* 
+        -Remember, margin: auto on left and right will center a block element 
+        -I would also set a "max-width" for responsiveness
+        -May want to add some padding
+        */
+      }
+
+      .form-wrap {
+        margin-top: 50px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        width: 400px;
+        padding: 20px 20px;
+        padding-right: 35px;
+        position:relative;
+        margin-left:auto;
+        margin-right: auto;
+        background: white;
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      .form-wrap h1 {
+        position: relative;
+        margin: auto;
+        font-size: 1.6rem;
+        display: block;
+        width: 105px;
+      }
+
+      .form-wrap .form-group {
+        /* 
+          Each label, input is wrapped in .form-group
+        */
+      }
+
+      .form-wrap .form-group label {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom :10px;
+      }
+
+      .form-wrap .form-group input {
+        margin-top: 5px;
+        margin-bottom:10px;
+        width:300px;
+        border-radius: 5px;
+        height:20px;
+        outline: none;
+        
+      }
+
+      .form-wrap button {
+         margin-top: 5px;
+         width: 300px;
+         height:27px;
+         border-radius: 5px;
+         background: #49c1a2;
+         color: white;
+      }
+
+      .form-wrap button:hover {
+        
+          background: #37a08e;
+        
+      }
+
+      .form-wrap .bottom-text {
+        /* 
+          Bottom text is smaller
+        */
+      }
+
+      footer {
+        position:relative;
+        margin-left:auto;
+        margin-right: auto;
+        width:279px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+      }
+
+      footer a {
+        font-family: Arial, Helvetica, sans-serif;
+        color:#49c1a2;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up</h1>
+        <p>It's free and only takes a minute</p>
+        <form>
+          <div class="form-group">
+            <label for="first-name">First Name</label><br />
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label><br />
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <br />
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label><br />
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <br />
+            <input type="password" name="pasword2" id="password2" />
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Terms & Conditions</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </form>
+      </div>
+      <footer>
+        <p>Already have an account? <a href="#">Login Here</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
